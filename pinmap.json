@@ -1,0 +1,16 @@
+{
+  "P9.24": { "offset": "0x184", "mode": "0x20", "desc": "uart1_txd" },
+  "P9.26": { "offset": "0x180", "mode": "0x20", "desc": "uart1_rxd" },
+  "P9.17": { "offset": "0x158", "mode": "0x30", "desc": "i2c1_scl" },
+  "P9.18": { "offset": "0x15C", "mode": "0x30", "desc": "i2c1_sda" },
+  "P9.22": { "offset": "0x150", "mode": "0x30", "desc": "spi0_sclk" },
+  "P9.21": { "offset": "0x154", "mode": "0x30", "desc": "spi0_d0 (MISO)" },
+  "P9.18": { "offset": "0x15C", "mode": "0x10", "desc": "spi0_d1 (MOSI)" },
+  "P9.17": { "offset": "0x158", "mode": "0x10", "desc": "spi0_cs0" },
+  "P9.14": { "offset": "0x048", "mode": "0x06", "desc": "ehrpwm1a" },
+  "P9.16": { "offset": "0x04C", "mode": "0x06", "desc": "ehrpwm1b" },
+  "P8.07": { "offset": "0x090", "mode": "0x07", "desc": "gpio2_2" },
+  "P8.08": { "offset": "0x094", "mode": "0x07", "desc": "gpio2_3" },
+  "P9.24": { "offset": "0x184", "mode": "0x12", "desc": "dcanc_tx" },
+  "P9.26": { "offset": "0x180", "mode": "0x32", "desc": "dcanc_rx" }
+}

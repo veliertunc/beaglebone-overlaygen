@@ -1,0 +1,28 @@
+
+/dts-v1/;
+/plugin/;
+
+/ {
+    compatible = "ti,beaglebone", "ti,beaglebone-black";
+
+    part-number = "{{PART_NUMBER}}";
+    version = "00A0";
+
+    fragment@0 {
+        target = <&pruss>;
+        __overlay__ {
+            status = "okay";
+        };
+    };
+
+    fragment@1 {
+        target-path = "/";
+        __overlay__ {
+            pru_shram: pru_shared_ram {
+                compatible = "ti,pru-shared-ram";
+                reg = <0x4a310000 0x2000>;  // Adjust if needed
+                status = "okay";
+            };
+        };
+    };
+};

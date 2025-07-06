@@ -1,0 +1,19 @@
+
+/dts-v1/;
+/plugin/;
+
+/ {
+    compatible = "ti,beaglebone", "ti,beaglebone-black";
+
+    part-number = "{{PART_NUMBER}}";
+    version = "00A0";
+
+    fragment@0 {
+        target = <&bone_capemgr>;
+        __overlay__ {
+            status = "okay";
+            disable_hdmi_audio = "1";
+            disable_hdmi_video = "1";
+        };
+    };
+};

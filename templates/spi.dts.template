@@ -1,0 +1,34 @@
+
+/dts-v1/;
+/plugin/;
+
+/ {
+    compatible = "ti,beaglebone", "ti,beaglebone-black";
+
+    part-number = "{{PART_NUMBER}}";
+    version = "00A0";
+
+    exclusive-use =
+        {{EXCLUSIVE_USE}};
+
+    fragment@0 {
+        target-path = "/";
+        __overlay__ {
+            {{PERIPHERAL}}_pins: pinmux_{{PERIPHERAL}}_pins {
+                pinctrl-single,pins = <
+                    {{PINMUX_LINES}}
+                >;
+            };
+        };
+    };
+
+    fragment@1 {
+        target = <&{{PERIPHERAL}}>;
+        __overlay__ {
+            status = "okay";
+            pinctrl-names = "default";
+            pinctrl-0 = <&{{PERIPHERAL}}_pins>;
+            spi-max-frequency = <24000000>;  /* Adjust as needed */
+        };
+    };
+};
